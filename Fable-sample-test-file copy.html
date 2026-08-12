@@ -54,6 +54,16 @@
       font-size: 1.2rem;
     }
 
+    .cta-button {
+      min-height: 42px;
+      border: 0;
+      border-radius: 6px;
+      background: #2f6b3c;
+      color: white;
+      font-size: 1.1rem;
+      padding: 0 16px;
+    }
+
     main {
       max-width: 1100px;
       margin: 0 auto;
@@ -116,6 +126,29 @@
       margin: 0;
     }
 
+    .newsletter-form {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+
+    .newsletter-form input {
+      min-width: 220px;
+      min-height: 42px;
+      padding: 0 12px;
+    }
+
+    .newsletter-form button {
+      min-height: 42px;
+      padding: 0 16px;
+      border: 0;
+      border-radius: 6px;
+      background: #2f6b3c;
+      color: white;
+    }
+
     section {
       margin-top: 36px;
     }
@@ -130,8 +163,7 @@
 </head>
 <body>
   <header>
-    <!-- Intentionally not an h1 -->
-    <div class="site-title">Fresh Basket Grocery</div>
+    <h1 class="site-title">Fresh Basket Grocery</h1>
 
     <nav aria-label="Main navigation">
       <a href="#">Home</a>
@@ -141,121 +173,109 @@
       <a href="#">Weekly Deals</a>
 
       <div class="header-actions">
-        <!-- Intentionally unlabeled buttons -->
-        <button class="icon-button">🔍</button>
-        <button class="icon-button">👤</button>
-        <button class="icon-button">🛒</button>
+        <button type="button" class="icon-button" aria-label="Search">🔍</button>
+        <button type="button" class="icon-button" aria-label="Account">👤</button>
+        <button type="button" class="icon-button" aria-label="Shopping cart">🛒</button>
       </div>
     </nav>
   </header>
 
   <main>
     <section class="hero">
-      <!-- Poor heading structure: begins with h3 -->
-      <h3>Fresh groceries delivered to your door</h3>
+      <h2>Fresh groceries delivered to your door</h2>
       <p>
         Shop produce, pantry essentials, dairy products, and bakery items
         from your neighbourhood grocery store.
       </p>
 
-      <!-- Intentionally unlabeled button with only an icon -->
-      <button class="icon-button">→</button>
+      <button type="button" class="cta-button" aria-label="Shop groceries now">Shop now</button>
     </section>
 
     <section>
-      <!-- Skips from h3 to h5 -->
-      <h5>Popular Products</h5>
-
-      <!-- Looks like a heading but is not a heading element -->
-      <div class="large-text">Fresh Picks This Week</div>
+      <h2>Popular Products</h2>
+      <h3 class="large-text">Fresh Picks This Week</h3>
 
       <div class="product-grid">
         <article class="product-card">
           <img src="https://via.placeholder.com/300x180?text=Apples" alt="Red apples">
-          <h2>Royal Gala Apples</h2>
+          <h3>Royal Gala Apples</h3>
           <p>$3.49 per bag</p>
 
-          <!-- Intentionally unlabeled add-to-cart button -->
-          <button>🛒</button>
+          <button type="button" aria-label="Add Royal Gala Apples to cart">🛒 Add to cart</button>
 
-          <div class="quantity-controls">
-            <!-- Intentionally unlabeled quantity buttons -->
-            <button>−</button>
-            <button>+</button>
+          <div class="quantity-controls" aria-label="Quantity controls for Royal Gala Apples">
+            <button type="button" aria-label="Decrease quantity">−</button>
+            <button type="button" aria-label="Increase quantity">+</button>
           </div>
         </article>
 
         <article class="product-card">
           <img src="https://via.placeholder.com/300x180?text=Bread" alt="Loaf of bread">
-          <!-- Incorrect heading level under h5 -->
-          <h4>Whole Wheat Bread</h4>
+          <h3>Whole Wheat Bread</h3>
           <p>$2.99 each</p>
 
-          <button>🛒</button>
+          <button type="button" aria-label="Add Whole Wheat Bread to cart">🛒 Add to cart</button>
 
-          <div class="quantity-controls">
-            <button>−</button>
-            <button>+</button>
+          <div class="quantity-controls" aria-label="Quantity controls for Whole Wheat Bread">
+            <button type="button" aria-label="Decrease quantity">−</button>
+            <button type="button" aria-label="Increase quantity">+</button>
           </div>
         </article>
 
         <article class="product-card">
           <img src="https://via.placeholder.com/300x180?text=Milk" alt="Carton of milk">
-          <!-- Visual title presented as plain text -->
-          <p><strong>2% Milk</strong></p>
+          <h3>2% Milk</h3>
           <p>$4.29 per carton</p>
 
-          <button>🛒</button>
+          <button type="button" aria-label="Add 2% Milk to cart">🛒 Add to cart</button>
 
-          <div class="quantity-controls">
-            <button>−</button>
-            <button>+</button>
+          <div class="quantity-controls" aria-label="Quantity controls for 2% Milk">
+            <button type="button" aria-label="Decrease quantity">−</button>
+            <button type="button" aria-label="Increase quantity">+</button>
           </div>
         </article>
 
         <article class="product-card">
           <img src="https://via.placeholder.com/300x180?text=Bananas" alt="Bunch of bananas">
-          <h6>Organic Bananas</h6>
+          <h3>Organic Bananas</h3>
           <p>$1.79 per bunch</p>
 
-          <button>🛒</button>
+          <button type="button" aria-label="Add Organic Bananas to cart">🛒 Add to cart</button>
 
-          <div class="quantity-controls">
-            <button>−</button>
-            <button>+</button>
+          <div class="quantity-controls" aria-label="Quantity controls for Organic Bananas">
+            <button type="button" aria-label="Decrease quantity">−</button>
+            <button type="button" aria-label="Increase quantity">+</button>
           </div>
         </article>
       </div>
     </section>
 
     <section>
-      <!-- Heading hierarchy continues inconsistently -->
       <h2>Weekly Specials</h2>
       <p>Save on selected produce, snacks, and household essentials.</p>
 
-      <!-- Intentionally unlabeled carousel buttons -->
-      <button class="icon-button">←</button>
-      <button class="icon-button">→</button>
+      <button type="button" class="icon-button" aria-label="Previous slide">←</button>
+      <button type="button" class="icon-button" aria-label="Next slide">→</button>
     </section>
 
     <section>
-      <h4>Newsletter</h4>
+      <h2>Newsletter</h2>
       <p>Sign up to receive grocery deals and new product announcements.</p>
 
-      <input type="email" placeholder="Email address">
-
-      <!-- Intentionally unlabeled submit button -->
-      <button class="icon-button">✉</button>
+      <form class="newsletter-form">
+        <label for="newsletter-email">Email address</label>
+        <input id="newsletter-email" type="email" name="email" placeholder="Enter your email">
+        <button type="submit" aria-label="Subscribe to newsletter">Subscribe</button>
+      </form>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2026 Fresh Basket Grocery</p>
 
-    <!-- Intentionally unlabeled social media buttons -->
-    <button class="icon-button">f</button>
-    <button class="icon-button">◎</button>
-    <button class="icon-button">▶</button>
+    <button type="button" class="icon-button" aria-label="Facebook">f</button>
+    <button type="button" class="icon-button" aria-label="Instagram">◎</button>
+    <button type="button" class="icon-button" aria-label="YouTube">▶</button>
   </footer>
 </body>
 </html>
