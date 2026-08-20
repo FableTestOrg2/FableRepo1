@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Main Page</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <!-- navigation -->
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <h1 id="page-title">Welcome to Our Site</h1>
+    <p>Example content to demonstrate page focus behavior.</p>
+  </main>
+
+  <script>
+    // Accessibility: ensure page heading is announced by assistive tech
+    (function () {
+      var h1 = document.getElementById('page-title');
+      if (!h1) return;
+
+      // Make the H1 programmatically focusable but not tabbable
+      h1.setAttribute('tabindex', '-1');
+
+      // Move focus to the H1 after load so screen readers announce it
+      function focusHeading() {
+        try {
+          h1.focus();
+        } catch (e) {
+          // no-op if focus isn't allowed
+        }
+      }
+
+      if (document.readyState === 'complete') {
+        focusHeading();
+      } else {
+        window.addEventListener('load', focusHeading);
+      }
+
+      // If this app uses client-side navigation, call focusHeading after route changes.
+    })();
+  </script>
+</body>
+</html>
